@@ -1,6 +1,6 @@
 package org.example;
 import java.time.LocalDate;
-public class Product {
+public class Product implements ShippableItem {
     private int id;
     private String productName;
     private  double price ;
@@ -31,8 +31,8 @@ public class Product {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getProductName() {
+    @Override
+    public String getName() {
         return productName;
     }
 
@@ -69,12 +69,8 @@ public class Product {
     }
 
     public void setExpiryDate(LocalDate expiryDate) {
-        // if(expiryDate.isBefore(LocalDate.now())){
-        //     throw new InvalidExpiryDateException("Expiry date cannot be in the past.");
-        // }
-        // else {
-            this.expiryDate = expiryDate;
-        //}
+        
+        this.expiryDate = expiryDate;
     }
 
     public boolean isNeedShipping() {
@@ -84,7 +80,7 @@ public class Product {
     public void setNeedShipping(boolean needShipping) {
         this.needShipping = needShipping;
     }
-
+    @Override
     public double getWeight() {
         return weight;
     }

@@ -1,6 +1,8 @@
 package org.example;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 public class Cart {
     private Map<Product,Integer> items;
     private double subTotal=0;
@@ -62,6 +64,16 @@ public class Cart {
     public boolean cartIsEmpty(){
         return items.isEmpty();
     }
+    // get all the shippla items in list 
+    public List<ShippableItem>getShippaleItems(){
+        List<ShippableItem> shippableItems = new ArrayList<>();
+        for(var item:items.entrySet()){
+            if(item.getKey().isNeedShipping()){
+                shippableItems.add(item.getKey());
+            }
+        }
+        return shippableItems;
+    }
     public void displayItems(){
         if(items.isEmpty()){
             System.out.println("The cart don't have any items ");
@@ -79,17 +91,17 @@ public class Cart {
             if(!shippableItems.isEmpty()){
                 System.out.println("** Shipment notice **");
                 for(var item:shippableItems.entrySet()){
-                    System.out.println(item.getValue()+" x "+ item.getKey().getProductName()+"      " + item.getKey().getWeight());
+                    System.out.println(item.getValue()+" x "+ item.getKey().getName()+"      " + item.getKey().getWeight());
                 }
-                System.out.println("Total package weight "+ packageWeight);
+                System.out.println("\nTotal package weight "+ packageWeight);
             }
             if(!unShippableItems.isEmpty()){
-                System.out.println("** Un Shipment items **");
+                System.out.println("\n** Un Shipment items **");
                 for(var item:unShippableItems.entrySet()){
-                    System.out.println(item.getValue()+" x "+ item.getKey().getProductName());
+                    System.out.println(item.getValue()+" x "+ item.getKey().getName());
                 }
             }
-            System.out.println("The sub total = "+getSubTotal());
+            System.out.println("\nThe sub total = "+getSubTotal());
             System.out.println("the shipping = "+getShipping());
             System.out.println("the total amount is "+getAmount());
         }

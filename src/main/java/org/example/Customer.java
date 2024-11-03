@@ -38,8 +38,8 @@ public class Customer {
     }
     public void checkOut(){
         if(myCart.getAmount()>balance){
-            System.out.println("Your balance is less than the amount of the cart");
-            setBalance(balance-myCart.getAmount());
+            System.out.println("Your balance is less than the amount of the cart please put fond or remove some items");
+            
         }
         else if(!myCart.cartIsEmpty()){
             myCart.displayItems();
