@@ -1,6 +1,6 @@
 package org.example;
 import java.time.LocalDate;
-public class Product implements ShippableItem {
+public class Product extends Exception implements ShippableItem {
     private int id;
     private String productName;
     private  double price ;
@@ -9,12 +9,16 @@ public class Product implements ShippableItem {
     private boolean needShipping;
     private double weight;
 
-    public Product(int id,String productName,double price,int quantity,LocalDate expiryDate, boolean  needShipping,double weight ){
+    public Product(int id,String productName,double price,int quantity,LocalDate expiryDate, boolean  needShipping,double weight ) {
         setId(id);
         setProductName(productName);
         setPrice(price);
         setQuantity(quantity);
+        if (expiryDate.isBefore(LocalDate.now())) {
+            throw new IllegalArgumentException("Product has expired.");
+        }else{
         setExpiryDate(expiryDate);
+    }
         setNeedShipping(needShipping);
         if(this.needShipping){
             setWeight(weight);
