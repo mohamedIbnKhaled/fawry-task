@@ -29,4 +29,4 @@ get the shipping items
 ## relationships between classes
 . The cart has a Product (aggregation relationship)
 . The customer has a Cart (composition relationship)
-#screenshots
+# screenshots
