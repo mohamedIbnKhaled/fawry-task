@@ -18,16 +18,14 @@ get amount
 displayitems
 ## Customer
 ### Fields 
-id, productName, price, quantity, expiryDate,needShipping,weight
+id, name, balance, mycart
 ### class Features
-you can create project and set all the fields for the project.
-this class implements ShippableItem interface
+create customer 
+add balance 
+make checkout 
 ## ShippingService
-### Fields 
-id, productName, price, quantity, expiryDate,needShipping,weight
 ### class Features
-you can create project and set all the fields for the project.
-this class implements ShippableItem interface
+get the shipping items
 
 ## relationships between classes
 . Cart has a Products (aggregation relationship)
