@@ -3,30 +3,30 @@ E-commerce project
 # classes 
 ## Product
 ### Fields 
-id, productName, price, quantity, expiryDate,needShipping,weight
-### class Features
-you can create project and set all the fields for the project.
-this class implements ShippableItem interface
+id, product name, price, quantity, expiry date, needshipping, weight
+### Class Features
+you can create a project and set all the fields for the project.
+this class implements the ShippableItem interface
 ## Cart
 ### Fields 
-id, list of items, subTotal, Shipping, packageWeight
-### class Features
-add product to cart 
-remove product from the cart
+id, list of items, subTotal, Shipping, package weight
+### Class Features
+add the product to the cart 
+remove the product from the cart
 clear it
 get amount
-displayitems
+display items
 ## Customer
 ### Fields 
-id, name, balance, mycart
-### class Features
-create customer 
-add balance 
+id, name, balance, my cart
+### Class Features
+create customer add balance 
 make checkout 
 ## ShippingService
-### class Features
+### Class Features
 get the shipping items
 
 ## relationships between classes
-. Cart has a Products (aggregation relationship)
-. Customer has a one Cart (composition relationship)
+. The cart has a Product (aggregation relationship)
+. The customer has a Cart (composition relationship)
+#screenshots
