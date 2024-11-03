@@ -30,5 +30,5 @@ get the shipping items
 . The cart has a Product (aggregation relationship)
 . The customer has a Cart (composition relationship)
 # screenshots
-![code snap](Screenshot from 2024-11-03 23-31-40.png)
-![code run](Screenshot from 2024-11-03 22-08-50.png)
+![code snap] (fawry-task/Screenshot from 2024-11-03 23-31-40.png)
+![code run] (fawry-task/Screenshot from 2024-11-03 22-08-50.png)
