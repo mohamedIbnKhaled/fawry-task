@@ -7,6 +7,27 @@ id, productName, price, quantity, expiryDate,needShipping,weight
 ### class Features
 you can create project and set all the fields for the project.
 this class implements ShippableItem interface
+## Cart
+### Fields 
+id, list of items, subTotal, Shipping, packageWeight
+### class Features
+add product to cart 
+remove product from the cart
+clear it
+get amount
+displayitems
+## Customer
+### Fields 
+id, productName, price, quantity, expiryDate,needShipping,weight
+### class Features
+you can create project and set all the fields for the project.
+this class implements ShippableItem interface
+## ShippingService
+### Fields 
+id, productName, price, quantity, expiryDate,needShipping,weight
+### class Features
+you can create project and set all the fields for the project.
+this class implements ShippableItem interface
 
 ## relationships between classes
 . Cart has a Products (aggregation relationship)
