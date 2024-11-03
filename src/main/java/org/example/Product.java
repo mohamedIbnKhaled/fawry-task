@@ -25,6 +25,7 @@ public class Product extends Exception implements ShippableItem {
         }
     }
     public Product(int id,String productName,double price,int quantity,LocalDate expiryDate, boolean  needShipping){
+        //constructor overloading to handle cases where a product does not need shipping. 
     
         this(id,productName,price,quantity,expiryDate,needShipping,0);
     }

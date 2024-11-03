@@ -4,7 +4,7 @@ public class Customer {
     private int id;
     private String name;
     private double balance;
-    private Cart myCart;
+    private Cart myCart;// composition relationship
     public Customer(int id,String name,double balance,Cart myCart){
         setId(id);
         setName(name);

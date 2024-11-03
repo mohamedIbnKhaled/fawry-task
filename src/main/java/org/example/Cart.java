@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.List;
 import java.util.ArrayList;
 public class Cart {
-    private Map<Product,Integer> items;
+    private Map<Product,Integer> items;//aggregation relationship
     private double subTotal=0;
     private double shipping=0;
     private double packageWeight=0;
